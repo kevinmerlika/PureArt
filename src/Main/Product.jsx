@@ -19,6 +19,14 @@ const handleAddToCart = (item) => {
   cartItems.push(item);
   localStorage.setItem('cart', JSON.stringify(cartItems));
   window.postMessage({ type: 'CART_UPDATED', payload: cartItems });
+    // Show banner
+    const banner = document.getElementById('banner');
+    banner.style.display = 'block';
+  
+    // Hide banner after 3 seconds
+    setTimeout(() => {
+      banner.style.display = 'none';
+    }, 3000);
 };
   
   return (
@@ -46,7 +54,10 @@ const handleAddToCart = (item) => {
             
           </ul>
       </div>
+      <div id="banner">Produkti u Shtua</div>
       </section>
+
+      
   )
           };
 export default Product
