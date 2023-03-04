@@ -71,18 +71,19 @@ function Receipt() {
     });
 
     // set the position for the total and barcode
-    y = doc.previousAutoTable.finalY + 10;
+    y = doc.previousAutoTable.finalY + 20;
+    
 
     // add the total
     doc.setFontSize(14);
-    doc.text(`Totali Bruto: ${totalPrice.toFixed(2)} ALL`, 20, y);
+    doc.text(`Totali Bruto: ${totalPrice.toFixed(2)} ALL`, 10, y);
     doc.text(`Tax: ${tax.toFixed(2)} ALL`, 80, y);
-    doc.text(`Totali Neto: ${totalnet.toFixed(2)} ALL`, 120, y);
+    doc.text(`Totali Neto: ${totalnet.toFixed(2)} ALL`, 140, y);
 
 
     // add the barcode
     const barcodeValue = Math.floor(Math.random() * 900000000) + 100000000;
-    JsBarcode(doc, '1234567890', { format: 'CODE128', displayValue: true });    doc.text(`${barcodeValue}`, 105, 70, 'center');
+    JsBarcode(doc, '1234567890', { format: 'CODE128', displayValue: true });    doc.text(`${barcodeValue}`, 100, 65, 'center');
 
     // download the PDF
     doc.save('receipt.pdf');

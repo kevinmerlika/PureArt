@@ -77,6 +77,9 @@ function Navbar() {
         </div>
         <div className='navbar__svg-container col-2 '>
           <a onClick={cartClick} className='navbar__svg'><svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" class="bi bi-cart" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" id="mainIconPathAttribute" stroke-width="0" stroke="#ff0000"></path> </svg>
+          {cart.length > 0 ? (
+      <span style={{color:"#9A5757", fontWeight:"600" ,fontSize:"20px"}}>{cart.length}</span>
+    ) : null}
           </a>
         </div>
         <div className='navbar__burger-menu col-2' onClick={handleClick}>
@@ -106,17 +109,20 @@ function Navbar() {
     <div className='cart__menu--opened__card'>
     <div>{item.title}</div>
     <div>{item.description}</div>
+    <div>{item.color}</div>
     <div>{item.price}</div>
-    <span onClick={() => removeItem(index)}>X</span>
+    <span className='close' onClick={() => removeItem(index)}>X</span>
     </div>
     
   </li>
 ))}
       </ul>
-      <div>Total Price: ${totalPrice}</div>
+      <div className='summary'>
+      <div className='summary__total'>Total Price: {totalPrice} ALL</div>
+
       <Receipt />
     </div>
-    
+    </div>
 
       
       </>
