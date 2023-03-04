@@ -164,6 +164,12 @@ a:link {
 
         }
 
+        &__card{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
 
     
     }

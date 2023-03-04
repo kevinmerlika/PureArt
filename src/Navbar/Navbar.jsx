@@ -5,6 +5,7 @@ import '../Style/grid.css'
 import '../Data/Nav'
 import nav from '../Data/Nav';
 import Product from '../Main/Product';
+import Receipt from '../Main/Recepit';
 
 function Navbar() {
 
@@ -16,6 +17,12 @@ function Navbar() {
   const [cart, setCart] = useState([]);
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
+  const removeItem = (index) => {
+    const updatedCart = [...cart];
+    updatedCart.splice(index, 1);
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+  };
 
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -100,13 +107,16 @@ function Navbar() {
     <div>{item.title}</div>
     <div>{item.description}</div>
     <div>{item.price}</div>
+    <span onClick={() => removeItem(index)}>X</span>
     </div>
     
   </li>
 ))}
       </ul>
       <div>Total Price: ${totalPrice}</div>
+      <Receipt />
     </div>
+    
 
       
       </>
