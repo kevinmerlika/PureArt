@@ -1,0 +1,135 @@
+.product{
+
+background-color: #DCDCDC;
+height: 600px;
+overflow-y: auto;
+padding-top: 70px;
+padding-bottom: 70px;
+
+cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
+
+
+&__listcontainer{
+    display: block;
+}
+
+&__list{
+    padding-top: 50px;
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 100px;
+    
+}
+
+&__list-link{
+    position: relative;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+
+    height: 310px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    width: auto;
+  
+    padding-bottom: 18px;
+    cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+}
+
+ &__list-image:hover{
+ transform: scale(1.1);
+ transition: all 0.3s ease-in-out;
+}
+
+&__list-item{
+
+}
+
+&__list-title{
+
+    background-color: #282634;
+    color: #ff4057;
+    font-size: 16px;
+    height: 11%;
+    margin-top: 0;
+    
+}
+&__list-image{
+    overflow: hidden;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+&__list-color{
+    background-color: #282634;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    height: 33px;
+  
+}
+&__list-price{
+    background-color: #282634;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    height: 33px;
+    
+
+}
+
+&__list-description{
+    background-color: #282634;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    
+    height: 30px;
+    
+    
+}
+
+&__extra{
+    visibility: visible;
+    display: flex;
+    background-color: #ff4057;
+    color: #282634;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-weight: 600;
+    height: 50px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out
+ 
+}
+
+&__extra:hover{
+    background-color: #282634;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    color: #ff4057;
+}
+
+&__noextra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    font-family: cursive;
+    font-weight: 600;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+}

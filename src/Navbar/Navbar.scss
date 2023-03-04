@@ -1,0 +1,445 @@
+.navbar{
+    position: sticky;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #282634;
+    color: #ff4057;
+    padding-top: 10px;
+    padding-bottom: 0;
+    z-index: 2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
+
+    
+
+    &__row{
+        display: flex;
+        
+        
+    }
+
+    &__listcontainer{
+        
+        display: block;
+        
+        
+    
+    }
+    &__list{
+        display: flex;
+        padding-left: 0;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    &__list-itemscontainer{
+        
+        width: 33%;
+    }
+    &__burger-menu{
+        display: none;
+    }
+    &__list-items{
+    
+        cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+        color: #ff4057;
+        white-space: nowrap;
+        font-family: 'Questrial', sans-serif;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__list-items:hover{
+        color: #DCDCDC;
+        text-shadow: 0px 0px 2px #DCDCDC;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__logo{
+        cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
+    }
+
+    &__svg-container{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    &__svg{
+
+        fill: #ff4057;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__svg:hover{
+        transform: scale(1.1);
+        transform: rotate(360deg);
+        
+        fill: #DCDCDC;
+        transition: all 0.3s ease-in-out;
+        cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+    }
+
+}
+
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+.mobile-menu--opened__container {
+   display: none;
+   
+}
+
+
+.mobile-menu--closed {
+    display: none;
+   
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #282634;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff4057;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+  }
+
+
+
+  .cart{
+    cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
+
+    &__menu--opened{
+        visibility: visible ;
+        background-color: #282634;
+        display: block;
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
+
+
+        &__list{
+            background-color: #282634;
+            height: 400px;
+            width: 300px;
+            overflow: auto;
+            display: flex;
+            justify-content: top;
+            flex-direction: column;
+            gap: 35px;
+            list-style: none;
+            margin-top: 120px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+
+        }
+
+        &__item{
+            display: block;
+            width: auto;
+            color: #ff4057;
+            cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+        }
+
+
+    
+    }
+
+    &__menu--closed{
+        display: block;
+        z-index: 1;
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+        position: fixed;
+        background-color: #282634;
+        width: 0;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+
+        
+
+
+
+        
+    }
+
+    
+   
+
+  }
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+   .mobile-menu--opened {
+    z-index: 1;
+    background-color: #282634;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    width: 200px;
+    height: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+    transition: all 0.3s ease-in-out;
+
+    &__list{
+        
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    &__list-link{
+        display: flex;
+        width: auto;
+        justify-content: center;
+    }
+    &__list-item{
+        color: #ff4057;
+        width: 100px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+    }
+
+    &__list-item:hover{
+        color: #DCDCDC;
+        width: 100px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.mobile-menu--opened__container {
+    background-color: #282634;
+    overflow-y: auto;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 70%;
+}
+
+.mobile-menu--closed {
+    display: block;
+    z-index: 1;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    right: 0;
+    position: fixed;
+    background-color: blue;
+    width: 0;
+    height: 600px;
+    transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #282634;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff4057;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+  }
+
+
+.navbar{
+    &__list-itemscontainer{
+        display: none;
+    }
+
+    &__burger-menu{
+     
+        padding-top: 0;
+        padding-left: 0;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: auto;
+        cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+    }
+    &__list-itemscontainer{
+        
+        display: none;
+    }
+
+    &__list{
+        display: none;
+        
+    }
+
+   
+
+    &__listcontainer{
+        
+        display: flex;
+        justify-content: space-between;
+        
+        
+    
+    }
+
+    &__svg-container{
+        display: flex;
+        
+        padding-left: 0;
+    }
+
+    &__svg{
+        justify-content: center;
+        fill: #ff4057;
+        padding-left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+   
+
+
+}
+
+
+@media only screen and (max-width: 500px) {
+
+
+    .navbar{
+        &__list-itemscontainer{
+            display: none;
+        }
+    
+        &__burger-menu{
+            
+            padding-top: 0;
+            padding-left: 0;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+        }
+        &__list-itemscontainer{
+            
+            display: none;
+        }
+    
+        &__list{
+            display: none;
+            
+        }
+    
+       
+    
+        &__listcontainer{
+            
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        
+        }
+    
+        &__svg-container{
+            display: flex;
+            
+            padding-left: 0;
+        }
+    
+        &__svg{
+            justify-content: center;
+            fill: #ff4057;
+            padding-left: 0;
+            transition: all 0.3s ease-in-out;
+        }
+       
+    
+    
+    }
+}
+.line{
+
+    display: block;
+    margin-right: 0px;
+    width: 40px;
+    height: 5px;
+    background-color: #ff4057;
+    transition: all 0.3s ease-in-out;
+  }
+  .line-1 {
+    transform: translateY(-14px);
+  }
+  
+  .line-2 {
+    transform: translateY(-2px);
+  }
+  
+  .line-3 {
+    transform: translateY(10px);
+  }
+  
+  
+  .open.line-1 {
+    transform: translateY(5px) rotate(45deg);
+  }
+  
+  .open.line-2 {
+    opacity: 0;
+  }
+  
+  .open.line-3 {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+
+}
