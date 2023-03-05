@@ -4,11 +4,11 @@ import 'jspdf-autotable';
 import JsBarcode from 'jsbarcode';
 
 
-function Receipt() {
+function Receipt(props) {
   const [cart, setCart] = useState([]);
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
   const tax = 20/100 * totalPrice;
-  const totalnet = totalPrice-tax;
+  const totalnet = props.data-tax;
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(cartItems);
@@ -76,7 +76,7 @@ function Receipt() {
 
     // add the total
     doc.setFontSize(14);
-    doc.text(`Totali Bruto: ${totalPrice.toFixed(2)} ALL`, 10, y);
+    doc.text(`Totali Bruto: ${props.data.toFixed(2)} ALL`, 10, y);
     doc.text(`Tax: ${tax.toFixed(2)} ALL`, 80, y);
     doc.text(`Totali Neto: ${totalnet.toFixed(2)} ALL`, 140, y);
 
@@ -86,7 +86,7 @@ function Receipt() {
     JsBarcode(doc, '1234567890', { format: 'CODE128', displayValue: true });    doc.text(`${barcodeValue}`, 100, 65, 'center');
 
     // download the PDF
-    doc.save('receipt.pdf');
+    doc.save(`${barcodeValue}.pdf`);
   };
 
   return (

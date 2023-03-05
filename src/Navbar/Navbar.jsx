@@ -24,6 +24,14 @@ function Navbar() {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
+  
+  function removeAllItems() {
+    console.log("deleted");
+    localStorage.removeItem('cart');
+    setCart([]);
+
+  }
+
   useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(cartItems);
@@ -58,6 +66,24 @@ function Navbar() {
     console.log(cart)
 
   }
+
+
+  const [promoCode, setPromoCode] = useState('');
+  const [discount, setDiscount] = useState(0);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    // Perform validation on the promo code
+    if (promoCode === 'Pureart') {
+      setDiscount(20/100); // Apply a 10% discount
+    } else {
+      setDiscount(0); // No discount applied
+    }
+    setPromoCode('');
+  }
+
+  const finalPrice = totalPrice - (totalPrice * discount)
+  
 
 
  
@@ -104,6 +130,9 @@ function Navbar() {
     </section>
     <div className={openCart ? 'cart__menu--opened': 'cart__menu--closed'}>
       <ul className='cart__menu--opened__list'>
+      {cart.length > 0 ? (
+      <button className='remove' onClick={() => removeAllItems()}>Clean</button>)
+      : null}
       {cart.map((item, index) => (
   <li key={index} className='cart__menu--opened__item'>
     <div className='cart__menu--opened__card'>
@@ -118,9 +147,18 @@ function Navbar() {
 ))}
       </ul>
       <div className='summary'>
-      <div className='summary__total'>Total Price: {totalPrice} ALL</div>
 
-      <Receipt />
+      <div className='summary__total'>Total Price: {totalPrice} ALL</div>
+      <form onSubmit={handleSubmit}>
+      <label>
+        Promo Code:
+        <input type="password" value={promoCode} onChange={(event) => setPromoCode(event.target.value)} />
+      </label>
+      <button className='apply' type="submit">APPLY</button>
+      <p>Discount: 20%</p>
+      <p>Final Price: ${finalPrice}</p>
+    </form>
+      <Receipt data={finalPrice}/>
     </div>
     </div>
 

@@ -141,6 +141,7 @@ a:link {
 
 
         &__list{
+            position: relative;
             background-color: #282634;
             height: 400px;
             width: 300px;
@@ -148,10 +149,10 @@ a:link {
             display: flex;
             justify-content: top;
             flex-direction: column;
-            gap: 35px;
+            gap: 30px;
             list-style: none;
             padding-left: 0;
-            margin-top: 120px;
+            margin-top: 90px;
             padding-top: 30px;
             padding-bottom: 50px;
 
@@ -198,6 +199,27 @@ a:link {
 
         }
 
+        .remove{
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 10px;
+            border: white;
+            color: #282634;
+            border-radius: 20px;
+            box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+            background-color: white;
+            cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+            transition: all 0.3s ease-in-out
+        }
+        .remove:hover{
+            color: white;
+            background-color: black;
+            transition: all 0.3s ease-in-out
+
+        
+        }
+
         
     
     }
@@ -233,8 +255,9 @@ a:link {
         display: flex;
         border-radius: 20px;
         flex-direction: column;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 5px;
         align-items: start;
         background-color: white;
 
@@ -242,6 +265,22 @@ a:link {
             font-weight: 600;
             font-size: 20px;
         }
+    }
+
+    .apply{
+        background-color: #282634;
+        color: white;
+        border-radius: 12px;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+    }
+    .apply:hover{
+        background-color: #9A5757;
+        color: #DCDCDC;
+        border-radius: 12px;
+        transition: all 0.3s ease-in-out;
     }
 
 
