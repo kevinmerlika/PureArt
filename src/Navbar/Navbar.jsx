@@ -54,7 +54,7 @@ function Navbar() {
        setOpenCart(!openCart)
     }
     setOpen(!open);
-
+    
   };
 
 

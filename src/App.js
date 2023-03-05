@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 
 
 function App() {
+  
   useEffect(() => {
     localStorage.clear();
   }, []);

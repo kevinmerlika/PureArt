@@ -3,6 +3,12 @@
   background-color: #282c34;
 }
 
+main .overlay:not(nav) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.App .overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important /* semi-transparent black */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
