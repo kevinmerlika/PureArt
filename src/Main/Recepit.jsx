@@ -86,7 +86,7 @@ function Receipt(props) {
     JsBarcode(doc, '1234567890', { format: 'CODE128', displayValue: true });    doc.text(`${barcodeValue}`, 100, 65, 'center');
 
     // download the PDF
-    doc.save(`${barcodeValue}.pdf`);
+    doc.save(`${barcodeValue}-${new Date().toLocaleDateString()}.pdf`);
   };
 
   return (
