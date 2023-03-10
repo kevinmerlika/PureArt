@@ -2,8 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar/Navbar';
 import Hero from './Main/Hero';
-import Product from './Main/Product';
+import Products from './Main/Product';
 import { useEffect } from 'react';
+import Footer from './Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
 
 
 
@@ -13,17 +17,17 @@ function App() {
     localStorage.clear();
   }, []);
   return (
-    
+    <Router>
       <div className="App">
-        
-        <main>
-          <Navbar />
-          <Hero/>
-          <Product />
-        </main>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<><Hero /><Products /></>} />
+          <Route path="/Produktet" element={<Products />} />
+        </Routes>
+        <Footer />
       </div>
-    
+    </Router>
   );
-}
-
+  
+  }
 export default App;

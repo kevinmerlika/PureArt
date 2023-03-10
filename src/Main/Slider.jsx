@@ -3,7 +3,7 @@ import '../Main/Slider.scss'
 
 function Slider() {
   return (
-    <div>Slider</div>
+    <div className=''>Slider</div>
   )
 }
 

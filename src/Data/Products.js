@@ -7,6 +7,7 @@ const Products = [
         price: 50000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 0
     },
     {
         id: 1,
@@ -16,6 +17,7 @@ const Products = [
         price: 5000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 1
     },
     {
         id: 2,
@@ -25,6 +27,8 @@ const Products = [
         price: 1000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 2
+
     },
     {
         id: 3,
@@ -34,15 +38,18 @@ const Products = [
         price: 30000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 0
+
     },
     {
         id: 4,
-        title: "Dere",
+        title: "Karrige",
         description: "2.00 x 0.60",
         color: "E bardhe",
         price: 30000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 1
     },
     {
         id: 5,
@@ -52,6 +59,8 @@ const Products = [
         price: 30000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 0
+
     },
     {
         id: 6,
@@ -61,6 +70,8 @@ const Products = [
         price: 30000,
         extra: 'Shto ne Shporte',
         url: "https://cdn-icons-png.flaticon.com/512/1973/1973946.png",
+        category: 0
+
     },
     
    

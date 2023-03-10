@@ -6,8 +6,15 @@ import '../Data/Nav'
 import nav from '../Data/Nav';
 import Product from '../Main/Product';
 import Receipt from '../Main/Recepit';
+import { Link, useLocation } from 'react-router-dom';
+
+
+
+
 
 function Navbar() {
+
+  const location = useLocation();
 
 
   const [open, setOpen] = useState(false);
@@ -97,8 +104,9 @@ function Navbar() {
         <div className='navbar__listcontainer col-6'>
           <ul className='navbar__list'>
           {nav.map(item => (
-            <a  key={item.title} className='navbar__list-itemscontainer' href='/'><li className='navbar__list-items'>{item.title}</li></a>
-          ))}
+            <Link key={item.title} to={item.link} className='navbar__list-itemscontainer'>
+  <li className={location.pathname === item.link ? 'navbar__list-items--active' : 'navbar__list-items'}>{item.title}</li>
+</Link>          ))}
           </ul>
         </div>
         <div className='navbar__svg-container col-2 '>

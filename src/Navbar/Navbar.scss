@@ -40,6 +40,7 @@
     &__list-itemscontainer{
         
         width: 33%;
+
     }
     &__burger-menu{
         display: none;
@@ -51,8 +52,22 @@
         white-space: nowrap;
         font-family: 'Questrial', sans-serif;
         transition: all 0.3s ease-in-out;
+
+        &--active{
+          cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+          
+          color: #DCDCDC;
+        text-shadow: 0px 0px 2px #DCDCDC;
+        white-space: nowrap;
+        font-family: 'Questrial', sans-serif;
+        transition: all 0.3s ease-in-out;
+        
+        }
     }
 
+    &__list-item:active{
+        
+    }
     &__list-items:hover{
         color: #DCDCDC;
         text-shadow: 0px 0px 2px #DCDCDC;

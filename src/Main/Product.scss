@@ -9,6 +9,45 @@ padding-bottom: 70px;
 cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
 
 
+
+&__categories{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #282634;
+    
+}
+
+&__filter{
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: #9A5757;
+    display: flex;
+    justify-content: space-evenly;
+    border-width: 1px;
+    border-color: #282634;
+    margin-bottom: 5px;
+    list-style: none;
+    cursor: url(https://cdn.custom-cursor.com/db/6134/32/material-wood-cursor.png) , default!important;
+
+
+    &__link{
+        font-size: 20px;
+        color: #282634;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
+        cursor: url(https://cdn.custom-cursor.com/db/6133/32/material-wood-pointer.png) , pointer!important;
+
+        
+    }
+}
+
+
+
 &__listcontainer{
     display: block;
 }
